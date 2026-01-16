@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug assembler",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=seapeaewe",
+                    "--manifest-path=${workspaceFolder}/asm/Cargo.toml"
+                ],
+                "problemMatcher": "$rustc"
+            },
+            "cwd": "${workspaceFolder}/asm",
+            "args": [
+                "test/test.s",
+                "-o", "test/test.bin"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "presentation": {
+                "hidden": false,
+                "group": "asm",
+                "order": 2
+            }
+        }
+    ]
+}

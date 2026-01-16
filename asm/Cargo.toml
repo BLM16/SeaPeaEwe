@@ -1,0 +1,19 @@
+[package]
+name = "seapeaewe"
+version = "0.1.0"
+authors = ["Bradley Myers"]
+edition = "2024"
+description = "An assembler for the SeaPeaEwe architecture."
+readme = "README.md"
+repository = "https://github.com/BLM16/SeaPeaEwe/"
+license-file = "../LICENSE"
+keywords = ["assembly", "assembler", "asm", "seapeaewe", "cpu"]
+categories = ["command-line-utilities", "compilers"]
+publish = false
+
+[[bin]]
+name = "seapeaewe"
+path = "bin/main.rs"
+
+[dependencies]
+clap = { version = "4.5.53", features = ["derive"] }
