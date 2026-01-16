@@ -1,0 +1,29 @@
+{
+	"name": "SeaPeaEwe",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": "latest"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mshr-h.VerilogHDL",
+				"ms-vscode.makefile-tools",
+				"ms-vscode.hexeditor"
+			],
+			"settings": {
+				"files.eol": "\n",
+				"files.insertFinalNewline": true,
+				"files.trimTrailingWhitespace": true,
+				"verilog.linting.linter": "verilator",
+				"verilog.linting.verilator.arguments": "--Wall",
+				"workbench.editorAssociations": {
+					"*.bin": "hexEditor.hexedit"
+				},
+				"hexeditor.columnWidth": 4 // Show one machine code instruction per line
+			}
+		}
+	}
+}
